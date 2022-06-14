@@ -9,5 +9,8 @@
     "esbuild": "^0.14.43",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0"
   }
 }
