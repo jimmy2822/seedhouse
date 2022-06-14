@@ -4,6 +4,7 @@ env:
 extends:
   - eslint:recommended
   - plugin:react/recommended
+  - plugin:react/jsx-runtime
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -12,3 +13,4 @@ parserOptions:
 plugins:
   - react
 rules: {}
+settings: {react: {version: detect} }
