@@ -4,7 +4,7 @@
   "scripts": {
     "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
     "watch": "esbuild app/javascript/*.* --watch --bundle --outdir=app/assets/builds --loader:.js=jsx",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css --minify"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",

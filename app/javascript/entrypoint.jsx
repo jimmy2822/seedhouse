@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 
-import App from "./components/app.js";
+import App from "./components/app.jsx";
 
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('app');
