@@ -9,6 +9,7 @@ class CreateProperties < ActiveRecord::Migration[7.0]
       t.string :address_line
       t.string :mrt_line
       t.integer :room
+      t.string :image
 
       t.timestamps
     end
