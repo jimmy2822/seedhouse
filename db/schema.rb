@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_083407) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_district"], name: "index_properties_on_address_district"
-    t.index ["title"], name: "index_properties_on_title", unique: true
+    t.index ["title", "address_line"], name: "index_properties_on_title_and_address_line", unique: true
   end
 
   create_table "users", force: :cascade do |t|
