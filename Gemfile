@@ -54,8 +54,11 @@ gem 'jsbundling-rails', '~> 1.0'
 gem 'cssbundling-rails', '~> 1.1'
 
 # Administration
-gem 'rails_admin', '3.0'
 gem 'cancancan', '3.3'
+gem 'rails_admin', '3.0'
+
+# Grape AP
+gem 'grape', '~> 1.6'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
