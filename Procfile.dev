@@ -1,4 +1,3 @@
 web: bin/rails server -p 3000
-js: npm run watch
 js: yarn build --watch
 css: yarn build:css --watch

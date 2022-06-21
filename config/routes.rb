@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root "properties#index"
+  root to: "properties#index"
 end

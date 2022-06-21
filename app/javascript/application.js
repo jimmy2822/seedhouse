@@ -1,1 +1,1 @@
-import './entrypoint.jsx';
+import './entrypoint.jsx'

@@ -1,10 +1,22 @@
-import * as React from "react";
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+
+import Favorites from '../routes/favorites.js'
+import Properties from '../routes/properties.js'
 
 const App = () => {
   return (
-    <div className="text-2xl text-red">
-      <div className="text-red-600">I am react 18</div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Properties />} />
+        <Route path='favorites' element={<Favorites />} />
+        <Route path='properties' element={<Properties />} />
+      </Routes>
+    </BrowserRouter>
   )
 };
 
