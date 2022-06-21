@@ -7,6 +7,7 @@ const Navbar = () => {
       <ul className='flex flex-col md:flex-row text-center md:justify-around w-full'>
         <Link to='/properties'>Property</Link>
         <Link to='/favorites'>Favorite</Link>
+        <Link to='/users/sign_in'>Membership</Link>
       </ul>
     </div>
   )

@@ -1,1 +1,0 @@
-import './entrypoint.jsx'

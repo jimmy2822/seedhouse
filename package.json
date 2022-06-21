@@ -2,7 +2,7 @@
   "name": "app",
   "private": "true",
   "scripts": {
-    "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --loader:.js=jsx",
+    "build": "esbuild app/javascript/entrypoint.jsx --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --loader:.js=jsx",
     "watch": "esbuild app/javascript/*.* --watch --bundle --outdir=app/assets/builds --loader:.js=jsx",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css --minify"
   },
