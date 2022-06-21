@@ -3,34 +3,30 @@ import {
   useState,
   useEffect
 } from 'react';
-import {
-  useNavigate
-} from 'react-router-dom';
 
 const Pagination = (props) => {
-  if (props.data === null) return;
-  const navigate = useNavigate();
-  const totalPages = props.data.data.pagination.total_pages;
-  [currentPage, setCurrentPage] = useState(props.data.data.pagination.current_page);
+  if (props.currentPage === null || props.totalPages === null) return;
+
+  const totalPages = props.totalPage;
+  const [currentPage, setCurrentPage] = useState(props.currentPage);
 
   useEffect(() => {
-    navigate(`/properties?page=${currentPage}`);
-    console.log('EFFECT!!!!!!!!!!!!');
-  }, [currentPage]);
+    setCurrentPage(props.currentPage);
+  });
 
   const prevPageHandler = () => {
-    setCurrentPage(currentPage - 1);
+    props.onChangeCurrentPage(currentPage - 1);
   };
 
   const nextPageHandler = () => {
-    setCurrentPage(currentPage + 1);
+    props.onChangeCurrentPage(currentPage + 1);
   };
 
   return (
-    <div className="flex justify-around my-5">
-      { currentPage === 1 ? null : <div onClick={prevPageHandler} >Prev</div> }
-      <div>Current Page: {currentPage}</div>
-      { currentPage < totalPages ? <div onClick={nextPageHandler}>Next</div> : null }
+    <div className="flex justify-around text-center my-5">
+      { currentPage === 1 ? <div className="w-1/3 bg-gray-400 rounded-full">Prev</div> : <button className="btn w-1/3 bg-sky-300 hover:bg-sky-500 rounded-full" onClick={prevPageHandler} >Prev</button> }
+      <div className="btn w-1/3">Current Page: {currentPage}</div>
+      { currentPage < totalPages ? <button className="w-1/3  bg-sky-300 hover:bg-sky-500 rounded-full" onClick={nextPageHandler}>Next</button> : <div className="w-1/3 bg-gray-400 rounded-full">Next</div> }
     </div>
   )
 };
