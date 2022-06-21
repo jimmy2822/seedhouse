@@ -15,7 +15,12 @@ module V1
       use :pagination, default_page: 1
     end
     get '/v1/properties' do
-      query_result = Property.all.page(params[:page]).per(8)
+      query_result = Property
+                     .ransack(title_like: params[:title])
+                     .result
+                     .order(amount_in_cent: :asc)
+                     .page(params[:page])
+                     .per(8)
       response_data = {
         items: query_result,
         pagination: {
