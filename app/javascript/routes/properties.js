@@ -9,11 +9,12 @@ import Pagination from '../components/layouts/pagination.jsx';
 import PropertyList from '../components/properties/property_list.jsx';
 
 const Properties = () => {
-  let { page } = useParams();
   const [data, setData] = useState(null);
+  let params = useParams();
+
 
   useEffect(() => {
-    fetchProperties(page);
+    fetchProperties(params.page);
   }, []);
 
   const fetchProperties = (page=1) => {
