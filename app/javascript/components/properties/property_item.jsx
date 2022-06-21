@@ -3,7 +3,7 @@ import React from 'react';
 const PropertyItem = (props) => {
   return (
     <div className="flex flex-col w-full md:w-1/2 md:m-0 m-2 p-2 border border-gray-200">
-      <img src={props.data.image} alt='image' />
+      <img className="md:h-60 h-48" src={props.data.image} alt='image' />
       <div className="text-xl h-30">{props.data.title}</div>
       <div className="flex text-lg h-30">
         <div className="text-red-600">

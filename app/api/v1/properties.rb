@@ -16,7 +16,7 @@ module V1
     end
     get '/v1/properties' do
       query_result = Property
-                     .ransack(title_like: params[:title])
+                     .ransack(title_cont_any: params[:title], address_city_cont_any: params[:address_city])
                      .result
                      .order(amount_in_cent: :asc)
                      .page(params[:page])

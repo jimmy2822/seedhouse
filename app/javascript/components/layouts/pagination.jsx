@@ -23,9 +23,9 @@ const Pagination = (props) => {
   };
 
   return (
-    <div className="flex justify-around text-center my-5">
-      { currentPage === 1 ? <div className="w-1/3 bg-gray-400 rounded-full">Prev</div> : <button className="btn w-1/3 bg-sky-300 hover:bg-sky-500 rounded-full" onClick={prevPageHandler} >Prev</button> }
-      <div className="btn w-1/3">Current Page: {currentPage}</div>
+    <div className="flex justify-around text-center my-5 md:text-lg text-sm">
+      { currentPage === 1 ? <div className="w-1/3 bg-gray-400 rounded-full">Prev</div> : <button className="w-1/3 bg-sky-300 hover:bg-sky-500 rounded-full" onClick={prevPageHandler} >Prev</button> }
+      <div className="w-1/3">Page: {currentPage}</div>
       { currentPage < totalPages ? <button className="w-1/3  bg-sky-300 hover:bg-sky-500 rounded-full" onClick={nextPageHandler}>Next</button> : <div className="w-1/3 bg-gray-400 rounded-full">Next</div> }
     </div>
   )
