@@ -1,7 +1,7 @@
 # README
 
 ## Environment
-* Ruby Version: 3.0.1
+* Ruby Version: 3.0.2
 * Rails Version: 7.0.3
 * React Version: 18.1.0
 * Database: PostgreSQL
