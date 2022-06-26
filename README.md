@@ -7,7 +7,7 @@
 * Database: PostgreSQL
 
 ## Setup Project
-1. Use `rbenv` or `rvm` to install Ruby 3.0.1
+1. Use `rbenv` or `rvm` to install Ruby 3.0.2
 2. Install bundler: `gem install bundler`
 3. Install Ruby dependencies: `bundle install`
 4. Install Node Package dependencies: `yarn`
