@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount API::Base => "/"
 

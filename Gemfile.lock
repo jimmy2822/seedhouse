@@ -103,6 +103,8 @@ GEM
       responders
       warden (~> 1.2.3)
     digest (3.1.0)
+    doorkeeper (5.5.4)
+      railties (>= 5)
     dry-configurable (0.15.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.6)
@@ -338,6 +340,7 @@ DEPENDENCIES
   cssbundling-rails (~> 1.1)
   debug
   devise (= 4.8.1)
+  doorkeeper (~> 5.5)
   grape (~> 1.6)
   jbuilder
   jsbundling-rails (~> 1.0)
