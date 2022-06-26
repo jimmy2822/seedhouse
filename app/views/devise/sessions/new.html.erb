@@ -12,8 +12,8 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
+    <div class="field hidden" >
+      <%= f.check_box :remember_me, checked: true%>
       <%= f.label :remember_me %>
     </div>
   <% end %>
