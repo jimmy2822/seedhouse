@@ -2,7 +2,9 @@
 
 module V1
   class Properties < Grape::API
+    use ActionDispatch::Session::CookieStore
     helpers API::HasResponse
+    helpers API::Authorization
 
     helpers do
       params :pagination do
@@ -28,7 +30,6 @@ module V1
           current_page: query_result.current_page
         }
       }
-
       respond(data: response_data)
     end
   end

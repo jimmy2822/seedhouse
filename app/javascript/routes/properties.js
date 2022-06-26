@@ -14,7 +14,7 @@ import PropertyList from '../components/properties/property_list.jsx';
 import QueryForm from '../components/layouts/query_form.jsx';
 
 const Properties = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
   let [searchParams, setSearchParams] = useSearchParams();
