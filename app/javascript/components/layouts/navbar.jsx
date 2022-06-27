@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LoginButton from './login_button.jsx'
 
 const Navbar = () => {
   return (
@@ -8,7 +7,7 @@ const Navbar = () => {
       <ul className='flex flex-col md:flex-row text-center md:justify-around w-full'>
         <Link to='/properties'>Property</Link>
         <Link to='/favorites'>Favorite</Link>
-        <LoginButton />
+        <Link to='/users/sign_in'>Sign In</Link>
       </ul>
     </div>
   )
