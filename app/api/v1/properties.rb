@@ -2,9 +2,7 @@
 
 module V1
   class Properties < Grape::API
-    use ActionDispatch::Session::CookieStore
     helpers API::HasResponse
-    helpers API::Authorization
 
     helpers do
       params :pagination do
