@@ -11,13 +11,14 @@ module V1
       end
     end
 
-    desc 'Properties data'
+    before { authenticate! }
+
+    desc 'Get favorites by user'
     params do
       use :pagination, default_page: 1
     end
     get '/v1/favorites' do
-      query_result = User
-                     .first
+      query_result = current_user
                      .favorite_properties
                      .ransack
                      .result

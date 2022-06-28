@@ -6,5 +6,6 @@ module API
     format :json
 
     mount V1::Properties
+    mount V1::Favorites
   end
 end
