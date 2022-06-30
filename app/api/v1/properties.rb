@@ -3,7 +3,6 @@
 module V1
   class Properties < Grape::API
     helpers API::HasResponse
-    helpers API::Authorization
 
     helpers do
       params :pagination do

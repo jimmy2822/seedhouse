@@ -1,9 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
+import FavoriteButton from '../favorites/favorite_button.jsx'
 
 const PropertyItem = (props) => {
+  const [isFavorite, setIsFavorite] = useState(props.isFavorite);
   return (
-    <div className="flex flex-col w-full md:w-1/2 md:m-0 m-2 p-2 border border-gray-200">
-      <img className="md:h-60 h-48" src={props.data.image} alt='image' />
+    <div className="relative flex flex-col w-full md:w-1/2 md:m-0 m-2 p-2 border border-gray-200">
+      <FavoriteButton isFavorite={isFavorite} propertyId={props.data.id}/>
+      <img className="md:h-80 h-48" src={props.data.image} alt='image'>
+      </img>
       <div className="text-xl h-30">{props.data.title}</div>
       <div className="flex text-lg h-30">
         <div className="text-red-600">

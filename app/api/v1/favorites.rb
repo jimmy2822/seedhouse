@@ -8,27 +8,19 @@ module V1
     before { authenticate! }
 
     desc 'Get favorites by user'
-
-    get '/v1/favorites' do
+    get 'v1/favorites' do
       query_result = current_user
                      .favorite_properties
-                     .ransack
-                     .result
                      .order(amount_in_cent: :asc)
-                     .page(params[:page])
-                     .per(8)
       response_data = {
-        items: query_result,
-        pagination: {
-          total_pages: query_result.total_pages,
-          current_page: query_result.current_page
-        }
+        items: query_result
       }
 
       respond(data: response_data)
     end
 
-    post '/v1/favorites' do
+    desc 'Create favorites by user'
+    post 'v1/favorites' do
       favorite = current_user.favorites.find_or_create_by(property_id: params[:property_id])
       user_favorite_property_ids = current_user.favorites.pluck(:property_id)
 
@@ -40,7 +32,8 @@ module V1
       respond(data: response_data)
     end
 
-    delete '/v1/favorites' do
+    desc 'Delete favorites by user'
+    delete 'v1/favorites' do
       destroyed_list = current_user.favorites.destroy_by(property_id: params[:property_id])
       user_favorite_property_ids = current_user.favorites.pluck(:property_id)
 
