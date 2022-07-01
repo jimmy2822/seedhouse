@@ -3,7 +3,7 @@
 module API
   module Authorization
     def authenticate!
-      error!('Not authorized!', 401) unless current_user
+      error!('Not authorized!', 401) unless access_token && current_user
     end
 
     def current_user
