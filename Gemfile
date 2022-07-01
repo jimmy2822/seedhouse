@@ -75,6 +75,8 @@ group :development, :test do
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
   end
+  gem 'factory_bot_rails'
+  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 end
 
 group :development do
