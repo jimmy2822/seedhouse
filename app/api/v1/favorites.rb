@@ -11,7 +11,7 @@ module V1
     get 'v1/favorites' do
       query_result = current_user
                      .favorite_properties
-                     .order(amount_in_cent: :asc)
+                     .order(id: :asc)
       response_data = {
         items: query_result
       }
