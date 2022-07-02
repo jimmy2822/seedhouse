@@ -4,7 +4,8 @@
   "scripts": {
     "build": "esbuild app/javascript/entrypoint.jsx --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --loader:.js=jsx",
     "watch": "esbuild app/javascript/*.* --watch --bundle --outdir=app/assets/builds --loader:.js=jsx",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css --minify"
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css --minify",
+    "test": "jest"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
@@ -19,7 +20,11 @@
     "tailwindcss": "^3.1.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
     "eslint": "^8.17.0",
-    "eslint-plugin-react": "^7.30.0"
+    "eslint-plugin-react": "^7.30.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2"
   }
 }
