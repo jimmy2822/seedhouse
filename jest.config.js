@@ -179,7 +179,7 @@ module.exports = {
       { 
         sourcemap: true,
         loaders: {
-          '.test.js': 'jsx'
+          '.test.(js|jsx)': 'jsx'
         }
       } 
     ]
