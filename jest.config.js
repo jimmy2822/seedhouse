@@ -173,17 +173,29 @@ module.exports = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
+
   transform: {
-    "^.+\\.(js|jsx)?$": [
-      "esbuild-jest",
+    "\\.[jt]sx?$": [ 
+      "esbuild-jest", 
       { 
         sourcemap: true,
         loaders: {
-          '.test.(js|jsx)': 'jsx'
+          '.test.js': 'jsx',
+          '.js': 'jsx',
         }
       } 
     ]
-  },
+  }
+  // transform: {
+  //   "\\.[jt]sx?$":  [ 'esbuild-jest', { 
+  //       loaders: {
+  //         '.test.js': 'jsx',
+  //         '.js': 'jsx'
+  //       }
+  //     }
+  //   ]
+  // },
+
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
