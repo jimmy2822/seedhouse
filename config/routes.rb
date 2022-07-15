@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     skip_controllers :authorizations, :applications, :authorized_applications
   end
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
   root to: "properties#index"
 end
